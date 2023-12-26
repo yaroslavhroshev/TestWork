@@ -1,12 +1,18 @@
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&display=swap');
 // @import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 // * {
 //   font-family: "Montserrat";
 // }
 
 body {
+  width: 100%;
+}
+
+.main-page {
+  @include flexcenter;
   width: 100%;
 }
 
