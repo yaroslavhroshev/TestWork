@@ -1,20 +1,87 @@
 @import "../abstracts/mixins";
+@import "../abstracts/variables";
 
 .menu {
   flex: 1 1 306px;
   background: #fff;
   box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
   height: 1198px;
+  padding: 37px 28px 0 28px;
 }
 
 .menu__title-logo-wrapper {
   width: 100%;
-  margin-top: 37px;
   @include flexcenter;
+  margin-bottom: 64px;
 
   .menu__logo {
-    background-image: url("../../../public/assets/Dashboard.svg");
+    background-image: url("../../../public/assets/svg/dashboard.svg");
     width: 37px;
     height: 37px;
+    margin-right: 8px;
   }
+
+  .menu__title {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.26px;
+
+    &::after {
+      content: "v.01";
+      color: #838383;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.1px;
+      margin-left: 4px;
+    }
+  }
+}
+
+.menu__nav {
+  @include flexcenter(center, flex-start, column);
+  gap: 40px;
+  width: 100%;
+}
+
+.menu__nav-link--margin {
+  margin-bottom: 40px;
+}
+
+.menu__nav-link {
+  color: $menu-color;
+  font-size: $main-desktop-font-size;
+  list-style: none;
+  font-weight: 500;
+  letter-spacing: -0.14px;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  height: 46px;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+  padding-left: 11px;
+
+  img {
+    margin-right: 14px;
+  }
+}
+
+.menu__nav-link--arrow {
+  &::after {
+    content: url("../../../public/assets/svg/chevron-right.svg");
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    display: block;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.menu__nav-link--active {
+  background-color: #5932ea;
 }
