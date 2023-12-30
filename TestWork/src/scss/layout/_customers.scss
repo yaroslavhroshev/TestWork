@@ -1,3 +1,57 @@
 .customers {
-  flex: 1 1 1134px;
+  width: 100%;
+  max-width: 968px;
+  height: 100%;
+  max-height: 812px;
+  margin-top: 128px;
+  margin-left: 71px;
+  filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
+  background-color: #ffffff;
+  border-radius: 24px; // під питанням
+
+  .customers__header {
+    padding: 30px 53px 0 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: -0.22px;
+      margin-bottom: 7px;
+    }
+
+    span {
+      color: #16c098;
+      font-size: $main-desktop-font-size;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.14px;
+    }
+
+    input {
+      border-radius: 10px;
+      background: #f9fbff;
+      width: 216px;
+      height: 38px;
+      flex-shrink: 0;
+      padding: 10px 40px;
+      font-family: "Poppins";
+      font-size: $main-desktop-font-size;
+      background: url("../../../public/assets/svg/search.svg") no-repeat center
+        left 8px #f9fbff;
+      background-size: 24px;
+
+      &::placeholder {
+        color: #b5b7c0;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.12px;
+      }
+    }
+  }
 }

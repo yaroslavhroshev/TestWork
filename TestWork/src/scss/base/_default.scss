@@ -12,6 +12,7 @@ body {
 .main-page {
   @include flexcenter;
   width: 100%;
+  position: relative;
 }
 
 // .container {
