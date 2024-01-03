@@ -1,3 +1,7 @@
-import './style.scss';
+import { menuStyleFunction, menuContentFunction } from './src/js/menu';
 
-// document.querySelector('#app').innerHTML 
+const menu = document.querySelector('.js-menu');
+menu.addEventListener('click', (event) => {
+  menuStyleFunction(event);
+  menuContentFunction(event);
+});

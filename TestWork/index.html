@@ -6,6 +6,7 @@
   <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.scss">
+  <script type="module" src="main.js"></script>
   <title>Test Work</title>
 </head>
 
@@ -19,44 +20,59 @@
         <div class="menu__logo"></div>
         <h1 class="menu__title">Dashboard</h1>
       </div>
-      <nav class="menu__nav-wrapper"><!-- не використовуваний клас -->
+      <nav class="js-menu"><!-- не використовуваний клас -->
         <ul class="menu__nav">
           <li class="menu__nav-link">
-            <img src="./public/assets/svg/key-square.svg" alt="key-in-square">
+            <img src="./public/assets/currentSvg/key-square.svg" alt="key-in-square">
             <p>Dashboard</p>
           </li>
-          <li class="menu__nav-link menu__nav-link--arrow menu__nav-link--active">
-            <img src="./public/assets/svg/3d-square.svg" alt="product-icon">
+          <li data-menu-item="product" class="menu__nav-link menu__nav-link--arrow-active menu__nav-link--active">
+            <img src="./public/assets/activeSvg/3d-square.svg" alt="product-icon">
             <a href="#">Product</a>
           </li>
-          <li class="menu__nav-link menu__nav-link--arrow">
-            <img src="./public/assets/svg/user-square.svg" alt="user-icon">
+          <li data-menu-item="customers" class="menu__nav-link menu__nav-link--arrow">
+            <img src="./public/assets/currentSvg/user-square.svg" alt="user-icon">
             <a href="#">Customers</a>
           </li>
-          <li class="menu__nav-link menu__nav-link--arrow">
-            <img src="./public/assets/svg/wallet-money.svg" alt="income-icon">
+          <li data-menu-item="income" class="menu__nav-link menu__nav-link--arrow">
+            <img src="./public/assets/currentSvg/wallet-money.svg" alt="income-icon">
             <a href="#">Income</a>
           </li>
-          <li class="menu__nav-link menu__nav-link--arrow">
-            <img src="./public/assets/svg/discount-shape.svg" alt="promote-icon">
+          <li data-menu-item="promote" class="menu__nav-link menu__nav-link--arrow">
+            <img src="./public/assets/currentSvg/discount-shape.svg" alt="promote-icon">
             <a href="#">Promote</a>
           </li>
-          <li class="menu__nav-link menu__nav-link--arrow">
-            <img src="./public/assets/svg/message-question.svg" alt="message-icon">
+          <li data-menu-item="support" class="menu__nav-link menu__nav-link--arrow">
+            <img src="./public/assets/currentSvg/message-question.svg" alt="message-icon">
             <a href="#">Help</a>
           </li>
         </ul>
       </nav>
     </section>
 
-    <section class="content">
+    <section class="content js-content">
 
       <div class="hello-evano">
         <p>Hello Evano 👋🏼,</p>
       </div>
 
+      <div data-content="product" class="product">
+        <h1>product</h1>
+      </div>
 
-      <div class="customers">
+      <div data-content="income" class="income">
+        <h1>income</h1>
+      </div>
+
+      <div data-content="promote" class="promote">
+        <h1>promote</h1>
+      </div>
+
+      <div data-content="support" class="support">
+        <h1>support</h1>
+      </div>
+
+      <div data-content="customers" class="customers">
         <div class="customers__header">
           <div class="customers__title-wrapper">
             <h2>All Customers</h2>
@@ -64,7 +80,28 @@
           </div>
           <input type="text" placeholder="Search">
         </div>
+        <div class="customers__list-wrapper">
+          <table>
+            <tr class="customers__customers-table-header--border">
+              <th>Customer Name</th>
+              <th>Company</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+              <th>Country</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <td>Jane Cooper</td>
+              <td>Microsoft</td>
+              <td>(225) 555-0118</td>
+              <td>jane@microsoft.com</td>
+              <td>United States</td>
+              <td>Active</td>
+            </tr>
+          </table>
+        </div>
       </div>
+
     </section>
 
     <div class="evano-card">
@@ -77,7 +114,7 @@
 
   </main>
 
-  <script type="module" src="/main.js"></script>
+
 </body>
 
 </html>
