@@ -1,8 +1,9 @@
-const menuStyleFunction = (event) => {
+const menuNavigationFunction = (event) => {
   event.preventDefault();
   if (event.target === event.currentTarget) return;
   let active = document.querySelector('.menu__nav-link--active');
   let img = active.querySelector('img');
+  const content = document.querySelectorAll('.js-content>div');
 
   if (event.target.dataset.menuItem || event.target.closest('[data-menu-item]')) {
     if (active === event.target || active === event.target.closest('[data-menu-item]')) {
@@ -21,10 +22,16 @@ const menuStyleFunction = (event) => {
       active.classList.add('menu__nav-link--arrow-active');
       img = active.querySelector('img');
       img.src = img.src.replace('currentSvg', 'activeSvg');
+
+      if (active.dataset.menuItem) {
+        const contentBlock = content.forEach((contentSection) => {
+          contentSection.dataset.content === active.dataset.menuItem
+            ? (contentSection.style.display = 'block')
+            : (contentSection.style.display = 'none');
+        });
+      }
     }
   }
 };
 
-const menuContentFunction = (event) => {};
-
-export { menuStyleFunction, menuContentFunction };
+export { menuNavigationFunction };

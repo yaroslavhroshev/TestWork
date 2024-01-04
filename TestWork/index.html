@@ -26,11 +26,11 @@
             <img src="./public/assets/currentSvg/key-square.svg" alt="key-in-square">
             <p>Dashboard</p>
           </li>
-          <li data-menu-item="product" class="menu__nav-link menu__nav-link--arrow-active menu__nav-link--active">
+          <li data-menu-item="product" class="menu__nav-link menu__nav-link--arrow">
             <img src="./public/assets/activeSvg/3d-square.svg" alt="product-icon">
             <a href="#">Product</a>
           </li>
-          <li data-menu-item="customers" class="menu__nav-link menu__nav-link--arrow">
+          <li data-menu-item="customers" class="menu__nav-link menu__nav-link--arrow-active menu__nav-link--active">
             <img src="./public/assets/currentSvg/user-square.svg" alt="user-icon">
             <a href="#">Customers</a>
           </li>
@@ -50,57 +50,66 @@
       </nav>
     </section>
 
-    <section class="content js-content">
+    <section class="content">
 
       <div class="hello-evano">
         <p>Hello Evano 👋🏼,</p>
       </div>
 
-      <div data-content="product" class="product">
-        <h1>product</h1>
-      </div>
+      <div class="content-wrapper js-content">
 
-      <div data-content="income" class="income">
-        <h1>income</h1>
-      </div>
-
-      <div data-content="promote" class="promote">
-        <h1>promote</h1>
-      </div>
-
-      <div data-content="support" class="support">
-        <h1>support</h1>
-      </div>
-
-      <div data-content="customers" class="customers">
-        <div class="customers__header">
-          <div class="customers__title-wrapper">
-            <h2>All Customers</h2>
-            <span>Active Members</span>
+        <div data-content="product" class="product tabs">
+          <div>
+            <h1>Product</h1>
           </div>
-          <input type="text" placeholder="Search">
         </div>
-        <div class="customers__list-wrapper">
-          <table>
-            <tr class="customers__customers-table-header--border">
-              <th>Customer Name</th>
-              <th>Company</th>
-              <th>Phone Number</th>
-              <th>Email</th>
-              <th>Country</th>
-              <th>Status</th>
-            </tr>
-            <tr>
-              <td>Jane Cooper</td>
-              <td>Microsoft</td>
-              <td>(225) 555-0118</td>
-              <td>jane@microsoft.com</td>
-              <td>United States</td>
-              <td>Active</td>
-            </tr>
-          </table>
+
+        <div data-content="income" class="income tabs">
+          <div>
+            <h1>Income</h1>
+          </div>
         </div>
+
+        <div data-content="promote" class="promote tabs">
+          <div>
+            <h1>Promote</h1>
+          </div>
+        </div>
+
+        <div data-content="support" class="support tabs">
+          <div>
+            <h1>Support</h1>
+          </div>
+        </div>
+
+        <div data-content="customers" class="customers">
+          <div class="customers__header">
+            <div class="customers__title-wrapper">
+              <h2>All Customers</h2>
+              <span>Active Members</span>
+            </div>
+            <input type="text" placeholder="Search">
+          </div>
+          <div class="customers__list-wrapper">
+            <table>
+              <tr class="customers__customers-table-header--border">
+                <th>Customer Name</th>
+                <th>Company</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>Status</th>
+              </tr>
+            </table>
+            <div class="customers__customers-count">
+              <p>Showing data 1 to 8 of 256K entries</p>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+
 
     </section>
 
