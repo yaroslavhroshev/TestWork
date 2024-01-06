@@ -3,16 +3,14 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.scss">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script type="module" src="main.js"></script>
   <title>Test Work</title>
 </head>
 
 <body>
-  <!-- <div id="app"> -->
-  <!-- </div> -->
 
   <main class="main-page">
     <section class="menu">
@@ -91,19 +89,20 @@
             <input type="text" placeholder="Search">
           </div>
           <div class="customers__list-wrapper">
-            <table>
-              <tr class="customers__customers-table-header--border">
+            <table id="data-container">
+              <!-- <tr class="customers__customers-table-header--border">
                 <th>Customer Name</th>
                 <th>Company</th>
                 <th>Phone Number</th>
                 <th>Email</th>
                 <th>Country</th>
                 <th>Status</th>
-              </tr>
+              </tr> -->
             </table>
-            <div class="customers__customers-count">
-              <p>Showing data 1 to 8 of 256K entries</p>
-            </div>
+          </div>
+          <div class="pagination">
+            <p>Showing data 1 to 8 of 256K entries</p>
+            <div id="pagination-container"></div>
           </div>
         </div>
 
