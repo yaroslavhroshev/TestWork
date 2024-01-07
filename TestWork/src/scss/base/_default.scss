@@ -23,36 +23,6 @@ body {
   @media (min-width: $desktop-break-point) {
     @include flexcenter;
     width: 100%;
+    padding: 0;
   }
 }
-
-// .container {
-//   width: 100%;
-//   padding-left: 10px;
-//   padding-right: 10px;
-
-//   @media (min-width: $dp-desctop) {
-//     max-width: 1220px;
-//   }
-// }
-
-// .btn {
-//   background: $main-color;
-//   color: $secondary-color;
-//   border-radius: 40px;
-//   font-weight: 700;
-//   transition: 0.4s;
-//   outline: 1px solid $main-color;
-//   outline-offset: -1px;
-
-//   @media (min-width: $dp-desctop) {
-//     &:hover {
-//       background: $secondary-color;
-//       color: $main-color;
-//     }
-//   }
-// }
-
-// .hidden {
-//   display: none;
-// }

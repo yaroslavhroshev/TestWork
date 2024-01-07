@@ -10,6 +10,11 @@
     line-height: normal;
     letter-spacing: -0.14px;
     margin-bottom: 1px;
+
+    @media (min-width: $tablet-break-point) {
+      font-size: $main-tablet-font-size;
+    }
+
     @media (min-width: $desktop-break-point) {
       font-size: $main-desktop-font-size;
     }

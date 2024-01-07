@@ -12,6 +12,16 @@
   .content-wrapper {
     width: 100%;
     height: 100%;
+
+    @media (min-width: $tablet-break-point) {
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (min-width: $desktop-break-point) {
+      // display: block;
+      justify-contents: flex-start;
+    }
   }
 }
 
@@ -20,16 +30,30 @@
   max-width: 968px;
   height: 100%;
   max-height: 812px;
-  margin-top: 128px;
-  margin-left: 71px;
+  margin-top: 20px;
   filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
   background-color: #ffffff;
   border-radius: 24px;
-  padding: 0 40px 0 38px;
+  padding: 20px 40px 30px 38px;
   display: none;
+
+  @media (min-width: $desktop-break-point) {
+    align-self: flex-start;
+    position: relative;
+    width: 100%;
+    // margin-top: 128px;
+    // margin-left: 71px;
+    margin: 128px 10px 0 71px;
+  }
 
   h1 {
     text-align: center;
     font-size: 40px;
+  }
+
+  p {
+    font-size: $main-desktop-font-size;
+    margin-top: 20px;
+    text-align: center;
   }
 }
