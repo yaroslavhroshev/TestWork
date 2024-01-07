@@ -2,11 +2,25 @@
 @import '../abstracts/variables';
 
 .menu {
-  flex: 1 1 306px;
   background: #fff;
   box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
-  height: 1198px;
-  padding: 37px 28px 0 28px;
+  height: max-content;
+  padding: 37px 28px 20px 28px;
+  width: 100%;
+  border-radius: 20px;
+
+  // @media (max-width: $mobile-break-point) {
+  //   width: 100%;
+  // }
+  @media (min-width: $desktop-break-point) {
+    align-self: flex-start;
+    flex: 1 1 306px;
+    background: #fff;
+    box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
+    height: 1198px;
+    padding: 37px 28px 0 28px;
+    border-radius: 0;
+  }
 }
 
 .menu__title-logo-wrapper {
@@ -41,14 +55,21 @@
 }
 
 .menu__nav {
-  @include flexcenter(center, flex-start, column);
-  gap: 40px;
+  @include flexcenter(center, flex-start);
+  flex-wrap: wrap;
+  flex-direction: row;
   width: 100%;
+  gap: 20px;
+
+  @media (min-width: $desktop-break-point) {
+    @include flexcenter(center, flex-start, column);
+    gap: 40px;
+  }
 }
 
-.menu__nav-link--margin {
-  margin-bottom: 40px;
-}
+// .menu__nav-link--margin {
+// margin-bottom: 40px;
+// }
 
 .menu__nav-link {
   color: $menu-color;
@@ -60,14 +81,38 @@
   display: flex;
   align-items: center;
   height: 46px;
-  width: 100%;
+  // width: 100%;
+  flex: 0 1 45%;
   position: relative;
   border-radius: 8px;
   padding-left: 11px;
-  cursor: pointer;
+  user-select: none;
+
+  @media (min-width: $desktop-break-point) {
+    color: $menu-color;
+    font-size: $main-desktop-font-size;
+    list-style: none;
+    font-weight: 500;
+    letter-spacing: -0.14px;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    height: 46px;
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    padding-left: 11px;
+    cursor: pointer;
+  }
 
   &:first-child {
     cursor: default;
+    width: 100%;
+    flex: 1 1 100%;
+    justify-content: center;
+    @media (min-width: $desktop-break-point) {
+      justify-content: flex-start;
+    }
   }
 
   img {
@@ -77,6 +122,9 @@
 
 .menu__nav-link--arrow {
   &::after {
+    @media (max-width: 440px) {
+      content: '';
+    }
     content: url('../../../public/assets/currentSvg/chevron-right.svg');
     position: absolute;
     right: 8px;
@@ -89,6 +137,9 @@
 
 .menu__nav-link--arrow-active {
   &::after {
+    @media (max-width: 440px) {
+      content: '';
+    }
     content: url('../../../public/assets/activeSvg/chevron-right.svg');
     position: absolute;
     right: 8px;
@@ -103,3 +154,136 @@
   background-color: #5932ea;
   color: #fff;
 }
+// .menu {
+//   align-self: flex-start;
+//   flex: 1 1 19.125rem;
+//   background: #fff;
+//   box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
+//   height: 74.875rem; /* 1198/1440 */
+//   // height: 1198px;
+//   padding: 37px 28px 0 28px;
+
+//   @media (max-width: $desktop-break-point) {
+//     height: auto; /* or set the desired height */
+//   }
+
+//   @media (max-width: $tablet-break-point) {
+//     padding: 20px 15px 0 15px;
+//     height: auto; /* or set the desired height */
+//   }
+// }
+
+// .menu__title-logo-wrapper {
+//   width: 100%;
+//   @include flexcenter;
+//   margin-bottom: 64px;
+
+//   .menu__logo {
+//     background-image: url('../../../public/assets/currentSvg/dashboard.svg');
+//     width: 37px;
+//     height: 37px;
+//     margin-right: 8px;
+//   }
+
+//   .menu__title {
+//     font-size: 26px;
+//     font-style: normal;
+//     font-weight: 600;
+//     line-height: normal;
+//     letter-spacing: 0.26px;
+
+//     &::after {
+//       content: 'v.01';
+//       color: #838383;
+//       font-size: 10px;
+//       font-weight: 500;
+//       line-height: normal;
+//       letter-spacing: -0.1px;
+//       margin-left: 4px;
+//     }
+//   }
+
+//   @media (max-width: $tablet-break-point) {
+//     margin-bottom: 40px;
+//   }
+// }
+
+// .menu__nav {
+//   @include flexcenter(center, flex-start, column);
+//   gap: 40px;
+//   width: 100%;
+
+//   @media (max-width: $tablet-break-point) {
+//     gap: 20px;
+//   }
+// }
+
+// .menu__nav-link--margin {
+//   margin-bottom: 40px;
+
+//   @media (max-width: $tablet-break-point) {
+//     margin-bottom: 20px;
+//   }
+// }
+
+// .menu__nav-link {
+//   color: $menu-color;
+//   font-size: $main-desktop-font-size;
+//   list-style: none;
+//   font-weight: 500;
+//   letter-spacing: -0.14px;
+//   line-height: normal;
+//   display: flex;
+//   align-items: center;
+//   height: 46px;
+//   width: 100%;
+//   position: relative;
+//   border-radius: 8px;
+//   padding-left: 11px;
+//   cursor: pointer;
+
+//   &:first-child {
+//     cursor: default;
+//   }
+
+//   img {
+//     margin-right: 14px;
+//   }
+
+//   @media (max-width: $tablet-break-point) {
+//     font-size: 14px;
+//   }
+
+//   @media (max-width: $mobile-break-point) {
+//     font-size: 12px;
+//   }
+// }
+
+// .menu__nav-link--arrow {
+//   &::after {
+//     content: url('../../../public/assets/currentSvg/chevron-right.svg');
+//     position: absolute;
+//     right: 8px;
+//     top: 15px;
+//     display: block;
+//     width: 16px;
+//     height: 16px;
+//   }
+// }
+
+// .menu__nav-link--arrow-active {
+//   &::after {
+//     content: url('../../../public/assets/activeSvg/chevron-right.svg');
+//     position: absolute;
+//     right: 8px;
+//     top: 15px;
+//     display: block;
+//     width: 16px;
+//     height: 16px;
+//   }
+// }
+
+// .menu__nav-link--active {
+//   background-color: #5932ea;
+//   color: #fff;
+// }

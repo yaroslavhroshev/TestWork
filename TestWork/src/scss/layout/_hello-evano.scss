@@ -1,7 +1,13 @@
 .hello-evano {
-  position: absolute;
-  top: 41px;
-  left: 71px;
+  text-align: center;
+  margin-top: 20px;
+
+  @media (min-width: $desktop-break-point) {
+    position: absolute;
+    top: 41px;
+    left: 71px;
+    margin-top: 0;
+  }
 
   p {
     font-size: 24px;

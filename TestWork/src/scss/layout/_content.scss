@@ -1,9 +1,13 @@
 .content {
-  position: relative;
-  width: 100%;
-  height: 1198px;
-  flex: 1 1 1134px;
   background-color: #fafbff;
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: $desktop-break-point) {
+    align-self: flex-start;
+    position: relative;
+    width: 100%;
+  }
 
   .content-wrapper {
     width: 100%;
@@ -20,7 +24,7 @@
   margin-left: 71px;
   filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
   background-color: #ffffff;
-  border-radius: 24px; // під питанням
+  border-radius: 24px;
   padding: 0 40px 0 38px;
   display: none;
 

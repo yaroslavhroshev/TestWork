@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import '../abstracts/mixins';
+@import '../abstracts/variables';
 
 * {
   font-family: 'Poppins';
@@ -8,12 +9,21 @@
 
 body {
   width: 100%;
+  height: auto;
 }
 
 .main-page {
-  @include flexcenter;
+  @include flexcenter(center, center, column);
   width: 100%;
+  height: auto;
   position: relative;
+  background-color: #fafbff;
+  padding: 20px;
+
+  @media (min-width: $desktop-break-point) {
+    @include flexcenter;
+    width: 100%;
+  }
 }
 
 // .container {
