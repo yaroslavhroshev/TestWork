@@ -3,14 +3,130 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.scss">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="module" src="main.js"></script>
   <title>Test Work</title>
 </head>
 
 <body>
-  <div id="app"></div>
-  <script type="module" src="/main.js"></script>
+
+  <main class="main-page">
+    <section class="menu">
+      <div class="menu__title-logo-wrapper">
+        <div class="menu__logo"></div>
+        <h1 class="menu__title">Dashboard</h1>
+      </div>
+      <nav class="js-menu">
+        <ul class="menu__nav">
+          <li class="menu__nav-link">
+            <img src="./public/assets/currentSvg/key-square.svg" alt="key-in-square">
+            <p>Dashboard</p>
+          </li>
+          <li data-menu-item="product" class="menu__nav-link menu__nav-link--arrow">
+            <img src="./public/assets/currentSvg/3d-square.svg" alt="product-icon">
+            <a href="#">Product</a>
+          </li>
+          <li data-menu-item="customers" class="menu__nav-link menu__nav-link--arrow-active menu__nav-link--active">
+            <img src="./public/assets/activeSvg/user-square.svg" alt="user-icon">
+            <a href="#">Customers</a>
+          </li>
+          <li data-menu-item="income" class="menu__nav-link menu__nav-link--arrow">
+            <img src="./public/assets/currentSvg/wallet-money.svg" alt="income-icon">
+            <a href="#">Income</a>
+          </li>
+          <li data-menu-item="promote" class="menu__nav-link menu__nav-link--arrow">
+            <img src="./public/assets/currentSvg/discount-shape.svg" alt="promote-icon">
+            <a href="#">Promote</a>
+          </li>
+          <li data-menu-item="support" class="menu__nav-link menu__nav-link--arrow">
+            <img src="./public/assets/currentSvg/message-question.svg" alt="message-icon">
+            <a href="#">Help</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="content">
+
+      <div class="hello-evano">
+        <p>Hello Evano 👋🏼,</p>
+      </div>
+
+      <div class="content-wrapper js-content">
+
+        <div data-content="product" class="product tabs">
+          <div>
+            <h1>Product</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ad debitis voluptas modi alias numquam
+              maiores dolore laudantium officiis fugit pariatur minima odio voluptatibus, voluptates laboriosam sapiente
+              quod sint quaerat!</p>
+          </div>
+        </div>
+
+        <div data-content="income" class="income tabs">
+          <div>
+            <h1>Income</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ad debitis voluptas modi alias numquam
+              maiores dolore laudantium officiis fugit pariatur minima odio voluptatibus, voluptates laboriosam sapiente
+              quod sint quaerat!</p>
+          </div>
+        </div>
+
+        <div data-content="promote" class="promote tabs">
+          <div>
+            <h1>Promote</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ad debitis voluptas modi alias numquam
+              maiores dolore laudantium officiis fugit pariatur minima odio voluptatibus, voluptates laboriosam sapiente
+              quod sint quaerat!</p>
+          </div>
+        </div>
+
+        <div data-content="support" class="support tabs">
+          <div>
+            <h1>Support</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ad debitis voluptas modi alias numquam
+              maiores dolore laudantium officiis fugit pariatur minima odio voluptatibus, voluptates laboriosam sapiente
+              quod sint quaerat!</p>
+          </div>
+        </div>
+
+        <div data-content="customers" class="customers">
+          <div class="customers__header">
+            <div class="customers__title-wrapper">
+              <h2>All Customers</h2>
+              <span>Active Members</span>
+            </div>
+            <input type="text" placeholder="Search">
+          </div>
+          <div class="customers__list-wrapper">
+            <table id="data-container">
+            </table>
+          </div>
+          <div class="pagination">
+            <p>Showing data 1 to 8 of 256K entries</p>
+            <div id="pagination-container"></div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+    <div class="evano-card">
+      <div class="evano-card__image"></div>
+      <div class="evano-card__text-wrapper">
+        <p class="evano-card__name">Evano</p>
+        <p class="evano-card__position">Project Manager</p>
+      </div>
+    </div>
+
+  </main>
+
+
 </body>
 
 </html>

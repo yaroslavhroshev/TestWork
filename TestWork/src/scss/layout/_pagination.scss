@@ -1,0 +1,130 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > p {
+    font-size: $main-mobile-font-size;
+    color: #b5b7c0;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.14px;
+    margin-bottom: 1px;
+
+    @media (min-width: $tablet-break-point) {
+      font-size: $main-tablet-font-size;
+    }
+
+    @media (min-width: $desktop-break-point) {
+      font-size: $main-desktop-font-size;
+    }
+  }
+}
+
+.paginationjs {
+  display: flex;
+  line-height: 1.6;
+  font-size: 12px;
+  font-weight: 500;
+  box-sizing: initial;
+  user-select: none;
+  &:after {
+    display: table;
+    content: ' ';
+    clear: both;
+  }
+
+  .paginationjs-ellipsis {
+    border: none !important;
+    background-color: #fff !important;
+
+    a {
+      color: #000 !important;
+      background-color: #fff !important;
+    }
+  }
+
+  .paginationjs-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    a {
+      content: url('../../../public/assets/currentSvg/prev.svg');
+      width: 8px !important;
+      height: 12px !important;
+      &:hover {
+        background: none !important;
+      }
+    }
+  }
+
+  .paginationjs-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    a {
+      content: url('../../../public/assets/currentSvg/next.svg');
+      width: 8px !important;
+      height: 12px !important;
+      &:hover {
+        background: none !important;
+      }
+    }
+  }
+
+  .paginationjs-pages {
+    float: left;
+    margin-left: 10px;
+    ul {
+      float: left;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 12px;
+    }
+    li {
+      float: left;
+      border: 1px solid #eee;
+      list-style: none;
+      border-radius: 4px;
+      background: #f5f5f5;
+      min-width: 24px;
+      height: 22px;
+      > a {
+        display: block;
+        height: 100%;
+        background: #f5f5f5;
+        font-size: 12px;
+        color: #404b52;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+          background: #eee;
+        }
+      }
+    }
+    li.active {
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #5932ea;
+      > a {
+        color: #fff;
+        line-height: 22px;
+        cursor: default;
+        background: #5932ea;
+        border-radius: 4px;
+      }
+    }
+    li.disabled {
+      cursor: default;
+      > a {
+        cursor: default;
+      }
+    }
+  }
+}

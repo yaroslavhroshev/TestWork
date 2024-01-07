@@ -1,0 +1,309 @@
+@import '../abstracts/variables';
+
+.customers {
+  width: 100%;
+  height: max-content;
+  margin-top: 20px;
+  filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 20px 30px 30px 28px;
+
+  @media (max-width: 480px) {
+    padding: 20px 5px 30px 5px;
+  }
+
+  @media (min-width: $tablet-break-point) {
+    padding: 25px 36px 36px 36px;
+  }
+
+  @media (min-width: $desktop-break-point) {
+    width: 100%;
+    max-width: 968px;
+    height: max-content;
+    max-height: 812px;
+    margin: 128px 20px 0 71px;
+    filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 30px 40px 40px 38px;
+  }
+
+  .customers__header {
+    padding: 0 13px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-break-point) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop-break-point) {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: -0.22px;
+      margin-bottom: 7px;
+
+      @media (min-width: $tablet-break-point) {
+        font-size: 20px;
+      }
+
+      @media (min-width: $desktop-break-point) {
+        font-size: 22px;
+      }
+    }
+
+    span {
+      color: #16c098;
+      font-size: $main-tablet-font-size;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.14px;
+
+      @media (min-width: $tablet-break-point) {
+        font-size: 13px;
+      }
+
+      @media (min-width: $desktop-break-point) {
+        font-size: $main-desktop-font-size;
+      }
+    }
+
+    input {
+      border-radius: 10px;
+      width: 180px;
+      height: 30px;
+      flex-shrink: 0;
+      padding: 10px 30px;
+      font-family: 'Poppins';
+      font-size: $main-tablet-font-size;
+      background: url('../../../public/assets/currentSvg/search.svg') no-repeat center left 8px
+        #f9fbff;
+      background-size: 18px;
+      border: none;
+
+      @media (min-width: $tablet-break-point) {
+        width: 200px;
+        height: 34px;
+        padding: 10px 35px;
+        font-size: 13px;
+        background-size: 20px;
+      }
+
+      @media (min-width: $desktop-break-point) {
+        width: 216px;
+        height: 38px;
+        padding: 10px 40px;
+        font-size: $main-desktop-font-size;
+        background-size: 24px;
+      }
+
+      &:focus-visible {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #b5b7c0;
+        font-size: $main-mobile-font-size;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.12px;
+
+        @media (min-width: $tablet-break-point) {
+          font-size: 13px;
+        }
+
+        @media (min-width: $desktop-break-point) {
+          font-size: $main-tablet-font-size;
+        }
+      }
+    }
+  }
+}
+
+.customers__list-wrapper {
+  margin-bottom: 30px;
+  tr {
+    border-bottom: 1px solid #eeeeee;
+    box-sizing: border-box;
+
+    &:first-child {
+      height: auto;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th {
+    text-align: center;
+    padding: 0;
+    padding-bottom: 5px;
+    color: #b5b7c0;
+    font-size: $main-mobile-font-size;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.14px;
+
+    &:first-child {
+      padding-right: 4px;
+    }
+
+    &:nth-child(2) {
+      padding-right: 12px;
+    }
+
+    &:nth-child(3) {
+      padding-right: 20px;
+    }
+
+    &:last-child {
+      padding-right: 11px;
+    }
+
+    @media (min-width: $tablet-break-point) {
+      font-size: $main-tablet-font-size;
+      text-align: start;
+      padding-bottom: 8px;
+
+      &:first-child {
+        padding-right: 5px;
+      }
+
+      &:nth-child(2) {
+        padding-right: 15px;
+      }
+
+      &:nth-child(3) {
+        padding-right: 24px;
+      }
+
+      &:last-child {
+        text-align: end;
+        padding-right: 13.5px;
+      }
+    }
+
+    @media (min-width: $desktop-break-point) {
+      text-align: start;
+      font-size: $main-desktop-font-size;
+      padding-bottom: 14px;
+
+      &:first-child {
+        padding-right: 10px;
+      }
+
+      &:nth-child(2) {
+        padding-right: 30px;
+      }
+
+      &:nth-child(3) {
+        padding-right: 48px;
+      }
+
+      &:last-child {
+        padding-right: 27px;
+      }
+    }
+  }
+
+  td {
+    color: #292d32;
+    font-size: $main-mobile-font-size;
+    font-weight: 500;
+    height: 50px;
+    letter-spacing: -0.14px;
+    padding: 0;
+
+    @media (min-width: $tablet-break-point) {
+      font-size: $main-tablet-font-size;
+      height: 56px;
+    }
+
+    @media (min-width: $desktop-break-point) {
+      font-size: $main-desktop-font-size;
+      font-weight: 500;
+      height: 69px;
+      letter-spacing: -0.14px;
+      padding: 0;
+    }
+
+    &:last-child {
+      text-align: end;
+    }
+  }
+
+  .customers__customers-table-header--border {
+    border-bottom: 1px solid #eeeeee;
+
+    @media (min-width: 1440px) {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 968px;
+        border-bottom: 1px solid #eeeeee;
+        bottom: -1px;
+        left: -38px;
+      }
+    }
+  }
+
+  .active-button {
+    p {
+      display: inline-flex;
+      width: 60px;
+      padding: 4px 12px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      border: 1px solid #00b087;
+      background: rgba(22, 192, 152, 0.38);
+      color: #008767;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.14px;
+
+      @media (min-width: $tablet-break-point) {
+        width: 70px;
+      }
+
+      @media (min-width: $desktop-break-point) {
+        width: 80px;
+      }
+    }
+  }
+  .inactive-button {
+    p {
+      width: 60px;
+      display: inline-flex;
+      padding: 4px 12px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      border: 1px solid #df0404;
+      color: #df0404;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.14px;
+      background: #ffc5c5;
+
+      @media (min-width: $tablet-break-point) {
+        width: 70px;
+      }
+
+      @media (min-width: $desktop-break-point) {
+        width: 80px;
+      }
+    }
+  }
+}

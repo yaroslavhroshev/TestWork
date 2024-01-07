@@ -1,0 +1,40 @@
+.evano-card {
+  display: flex;
+  width: max-content;
+  gap: 12px;
+  margin-top: 20px;
+
+  @media (min-width: $desktop-break-point) {
+    display: flex;
+    position: absolute;
+    width: max-content;
+    bottom: 76px;
+    left: 28px;
+    gap: 12px;
+    margin-top: 0;
+  }
+
+  .evano-card__image {
+    background-image: url('../../../public/assets/currentSvg/evano-svg.svg');
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+  }
+
+  .evano-card__name {
+    font-weight: 500;
+    font-size: $main-desktop-font-size;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    position: relative;
+    top: 1px;
+  }
+
+  .evano-card__position {
+    color: #757575;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.12px;
+  }
+}
