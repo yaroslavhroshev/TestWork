@@ -19,8 +19,7 @@
     }
 
     @media (min-width: $desktop-break-point) {
-      // display: block;
-      justify-contents: flex-start;
+      justify-content: flex-start;
     }
   }
 }
@@ -41,8 +40,6 @@
     align-self: flex-start;
     position: relative;
     width: 100%;
-    // margin-top: 128px;
-    // margin-left: 71px;
     margin: 128px 10px 0 71px;
   }
 

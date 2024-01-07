@@ -5,8 +5,6 @@ import 'paginationjs';
 const menu = document.querySelector('.js-menu');
 menu.addEventListener('click', menuNavigationFunction);
 
-const customersTable = document.querySelector('.customers__list-wrapper > table');
-
 $(document).ready(function () {
   $('#pagination-container').pagination({
     dataSource: [...customers],
