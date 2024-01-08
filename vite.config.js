@@ -3,9 +3,9 @@ import autoprefixer from 'autoprefixer';
 import legacy from '@vitejs/plugin-legacy';
 
 export default defineConfig({
-  base: './',
+  base: '/TestWork',
   server: {
-    // open: true,
+    open: true,
   },
   build: {
     target: 'esnext',
