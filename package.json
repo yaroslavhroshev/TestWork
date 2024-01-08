@@ -2,8 +2,11 @@
   "name": "testwork",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://yaroslavhroshev.github.io/TestWork/",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite --open",
     "start": "vite --open",
     "build": "vite build",
@@ -22,6 +25,7 @@
     "vite": "^5.0.8"
   },
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "paginationjs": "^2.6.0"
   }
 }
