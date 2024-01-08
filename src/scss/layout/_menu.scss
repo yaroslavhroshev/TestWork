@@ -26,7 +26,7 @@
   margin-bottom: 64px;
 
   .menu__logo {
-    background-image: url('../../../public/assets/currentSvg/dashboard.svg');
+    background-image: url('/dist/assets/currentSvg/dashboard.svg');
     width: 37px;
     height: 37px;
     margin-right: 8px;
@@ -129,7 +129,7 @@
 
 .menu__nav-link--arrow {
   &::after {
-    content: url('../../../public/assets/currentSvg/chevron-right.svg');
+    content: url('/dist/assets/currentSvg/chevron-right.svg');
     position: absolute;
     right: 8px;
     top: 15px;
@@ -146,7 +146,7 @@
     }
 
     @media (min-width: $desktop-break-point) {
-      content: url('../../../public/assets/currentSvg/chevron-right.svg');
+      content: url('/dist//assets/currentSvg/chevron-right.svg');
     }
   }
 }
@@ -156,7 +156,7 @@
     @media (max-width: 440px) {
       content: '';
     }
-    content: url('../../../public/assets/activeSvg/chevron-right.svg');
+    content: url('/dist/assets/activeSvg/chevron-right.svg');
     position: absolute;
     right: 8px;
     top: 15px;
@@ -169,7 +169,7 @@
     }
 
     @media (min-width: $desktop-break-point) {
-      content: url('../../../public/assets/activeSvg/chevron-right.svg');
+      content: url('/dist/assets/activeSvg/chevron-right.svg');
     }
   }
 }
